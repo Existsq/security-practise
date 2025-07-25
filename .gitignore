@@ -1,1 +1,4 @@
 .idea/
+/eureka/target/
+/gateway/target/
+/security/target/
