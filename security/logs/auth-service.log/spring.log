@@ -1,0 +1,114 @@
+2025-07-17T13:24:14.334+03:00 TRACE 54387 --- [auth-service] [main] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {org.springframework.boot.autoconfigure.security.servlet.SpringBootWebSecurityConfiguration$WebSecurityEnablerConfiguration=org.springframework.boot.autoconfigure.security.servlet.SpringBootWebSecurityConfiguration$WebSecurityEnablerConfiguration@13cfe28b}
+2025-07-17T13:24:14.337+03:00  INFO 54387 --- [auth-service] [main] eAuthenticationProviderManagerConfigurer : Found 2 AuthenticationProvider beans, with names [daoAuthenticationProvider, jwtAuthenticationProvider]. Global Authentication Manager will not be configured with AuthenticationProviders. Consider publishing a single AuthenticationProvider bean, or wiring your Providers directly using the DSL.
+2025-07-17T13:24:14.338+03:00  INFO 54387 --- [auth-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2025-07-17T13:24:14.601+03:00 DEBUG 54387 --- [auth-service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, JwtAuthenticationFilter, JsonUsernamePasswordAuthFilter, SecurityContextHolderAwareRequestFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-07-17T13:56:37.223+03:00 ERROR 54387 --- [auth-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.0.228:auth-service:9000 - de-registration failedCannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:798)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:748)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1474)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:707)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1467)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2025-07-17T15:36:54.934+03:00 TRACE 56815 --- [auth-service] [main] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {org.springframework.boot.autoconfigure.security.servlet.SpringBootWebSecurityConfiguration$WebSecurityEnablerConfiguration=org.springframework.boot.autoconfigure.security.servlet.SpringBootWebSecurityConfiguration$WebSecurityEnablerConfiguration@7d3cb276}
+2025-07-17T15:36:54.935+03:00  INFO 56815 --- [auth-service] [main] eAuthenticationProviderManagerConfigurer : Found 2 AuthenticationProvider beans, with names [daoAuthenticationProvider, jwtAuthenticationProvider]. Global Authentication Manager will not be configured with AuthenticationProviders. Consider publishing a single AuthenticationProvider bean, or wiring your Providers directly using the DSL.
+2025-07-17T15:36:54.936+03:00  INFO 56815 --- [auth-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2025-07-17T15:36:55.177+03:00 DEBUG 56815 --- [auth-service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, JwtAuthenticationFilter, JsonUsernamePasswordAuthFilter, SecurityContextHolderAwareRequestFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-07-17T15:37:24.171+03:00 TRACE 56916 --- [auth-service] [main] eGlobalAuthenticationAutowiredConfigurer : Eagerly initializing {org.springframework.boot.autoconfigure.security.servlet.SpringBootWebSecurityConfiguration$WebSecurityEnablerConfiguration=org.springframework.boot.autoconfigure.security.servlet.SpringBootWebSecurityConfiguration$WebSecurityEnablerConfiguration@4016d5fe}
+2025-07-17T15:37:24.173+03:00  INFO 56916 --- [auth-service] [main] eAuthenticationProviderManagerConfigurer : Found 2 AuthenticationProvider beans, with names [daoAuthenticationProvider, jwtAuthenticationProvider]. Global Authentication Manager will not be configured with AuthenticationProviders. Consider publishing a single AuthenticationProvider bean, or wiring your Providers directly using the DSL.
+2025-07-17T15:37:24.174+03:00  INFO 56916 --- [auth-service] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2025-07-17T15:37:24.664+03:00 DEBUG 56916 --- [auth-service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, JwtAuthenticationFilter, JsonUsernamePasswordAuthFilter, SecurityContextHolderAwareRequestFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-07-17T15:38:00.720+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-1] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain defined as 'publicSecurityFilterChain' in [class path resource [com/practise/security/infrastructure/config/SecurityConfig.class]] matching [any request] and having filters [DisableEncodeUrl, WebAsyncManagerIntegration, SecurityContextHolder, HeaderWriter, Csrf, JwtAuthentication, JsonUsernamePasswordAuth, SecurityContextHolderAwareRequest, SessionManagement, ExceptionTranslation, Authorization] (1/1)
+2025-07-17T15:38:00.723+03:00 DEBUG 56916 --- [auth-service] [http-nio-9000-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /csrf
+2025-07-17T15:38:00.726+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-1] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/11)
+2025-07-17T15:38:00.733+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-1] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/11)
+2025-07-17T15:38:00.736+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-1] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/11)
+2025-07-17T15:38:00.740+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-1] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (4/11)
+2025-07-17T15:38:00.742+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-1] o.s.security.web.FilterChainProxy        : Invoking CsrfFilter (5/11)
+2025-07-17T15:38:00.744+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-1] s.s.w.c.CsrfTokenRequestAttributeHandler : Wrote a CSRF token to the following request attributes: [_csrf, org.springframework.security.web.csrf.CsrfToken]
+2025-07-17T15:38:00.748+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-1] o.s.security.web.csrf.CsrfFilter         : Did not protect against CSRF since request did not match CsrfNotRequired [TRACE, HEAD, GET, OPTIONS]
+2025-07-17T15:38:00.749+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-1] o.s.security.web.FilterChainProxy        : Invoking JwtAuthenticationFilter (6/11)
+2025-07-17T15:38:00.751+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-1] o.s.security.web.FilterChainProxy        : Invoking JsonUsernamePasswordAuthFilter (7/11)
+2025-07-17T15:38:00.753+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-1] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderAwareRequestFilter (8/11)
+2025-07-17T15:38:00.756+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-1] o.s.security.web.FilterChainProxy        : Invoking SessionManagementFilter (9/11)
+2025-07-17T15:38:00.757+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-1] .s.s.w.c.SupplierDeferredSecurityContext : Created SecurityContextImpl [Null authentication]
+2025-07-17T15:38:00.757+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-1] o.s.security.web.FilterChainProxy        : Invoking ExceptionTranslationFilter (10/11)
+2025-07-17T15:38:00.757+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-1] o.s.security.web.FilterChainProxy        : Invoking AuthorizationFilter (11/11)
+2025-07-17T15:38:00.759+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-1] estMatcherDelegatingAuthorizationManager : Authorizing GET /csrf
+2025-07-17T15:38:00.762+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-1] estMatcherDelegatingAuthorizationManager : Checking authorization on GET /csrf using org.springframework.security.authorization.SingleResultAuthorizationManager@31b4906a
+2025-07-17T15:38:00.768+03:00 DEBUG 56916 --- [auth-service] [http-nio-9000-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /csrf
+2025-07-17T15:38:00.918+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-1] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match request to [Is Secure]
+2025-07-17T15:38:12.986+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-2] o.s.security.web.FilterChainProxy        : Trying to match request against DefaultSecurityFilterChain defined as 'publicSecurityFilterChain' in [class path resource [com/practise/security/infrastructure/config/SecurityConfig.class]] matching [any request] and having filters [DisableEncodeUrl, WebAsyncManagerIntegration, SecurityContextHolder, HeaderWriter, Csrf, JwtAuthentication, JsonUsernamePasswordAuth, SecurityContextHolderAwareRequest, SessionManagement, ExceptionTranslation, Authorization] (1/1)
+2025-07-17T15:38:12.987+03:00 DEBUG 56916 --- [auth-service] [http-nio-9000-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /login
+2025-07-17T15:38:12.987+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-2] o.s.security.web.FilterChainProxy        : Invoking DisableEncodeUrlFilter (1/11)
+2025-07-17T15:38:12.987+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-2] o.s.security.web.FilterChainProxy        : Invoking WebAsyncManagerIntegrationFilter (2/11)
+2025-07-17T15:38:12.988+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-2] o.s.security.web.FilterChainProxy        : Invoking SecurityContextHolderFilter (3/11)
+2025-07-17T15:38:12.988+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-2] o.s.security.web.FilterChainProxy        : Invoking HeaderWriterFilter (4/11)
+2025-07-17T15:38:12.988+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-2] o.s.security.web.FilterChainProxy        : Invoking CsrfFilter (5/11)
+2025-07-17T15:38:12.988+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-2] s.s.w.c.CsrfTokenRequestAttributeHandler : Wrote a CSRF token to the following request attributes: [_csrf, org.springframework.security.web.csrf.CsrfToken]
+2025-07-17T15:38:12.989+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-2] o.s.security.web.csrf.CsrfFilter         : Found a CSRF token in the request
+2025-07-17T15:38:12.990+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-2] o.s.security.web.FilterChainProxy        : Invoking JwtAuthenticationFilter (6/11)
+2025-07-17T15:38:12.990+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-2] o.s.security.web.FilterChainProxy        : Invoking JsonUsernamePasswordAuthFilter (7/11)
+2025-07-17T15:38:12.998+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-2] o.s.s.authentication.ProviderManager     : Authenticating request with DaoAuthenticationProvider (1/2)
+2025-07-17T15:38:13.558+03:00 DEBUG 56916 --- [auth-service] [http-nio-9000-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-07-17T15:38:13.613+03:00 TRACE 56916 --- [auth-service] [http-nio-9000-exec-2] o.s.s.w.header.writers.HstsHeaderWriter  : Not injecting HSTS header since it did not match request to [Is Secure]
+2025-07-17T15:57:50.910+03:00 ERROR 56916 --- [auth-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/192.168.0.228:auth-service:9000 - de-registration failedCannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:387)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:134)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:798)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:748)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1474)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:707)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1467)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
